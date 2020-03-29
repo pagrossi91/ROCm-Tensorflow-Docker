@@ -1,11 +1,4 @@
-from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, GlobalAveragePooling2D, Dense
-from tensorflow.keras.models import Model
 import tensorflow as tf
-
-import numpy as np
-import os
-import pickle
-import sklearn
 
 # Check ROCm stack and GPU
 rocm = tf.test.is_built_with_rocm()
