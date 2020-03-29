@@ -1,3 +1,7 @@
-# rocm-test
+# ROCm Test Docker
 
-Attempting to get tensorflow to work on AMD GPU with ROCm in a docker container on Ubuntu 18.04
+Creating a docker container to run Tensorflow on AMD GPU with ROCm on Ubuntu 18.04.
+
+## Status
+- Tensorflow built with ROCm: True
+- AMD GPU not found in docker container
