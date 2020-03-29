@@ -11,9 +11,11 @@ services:
           DISPLAY:
           TF_FORCE_GPU_ALLOW_GROWTH: 'true'
           ROCM_PATH: 3.1.0
-        user: 1000:1000
+#        user: 1000:1000 # For use with NVIDIA
+        devices:
+          - "/dev/kfd:/dev/kfd"
+          - "/dev/dri:/dev/dri"
         volumes:
           - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
-          - "/etc/passwd:/etc/passwd"
-          #- "/home/paul/.keras/:/tmp/.keras/"
+          - "/etc/passwd:/etc/passwd:ro"
           - "/opt/data:/opt/data"
