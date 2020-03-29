@@ -1,0 +1,13 @@
+tensorflow-rocm
+
+sklearn
+matplotlib
+pandas
+scipy
+numpy
+h5py
+Pillow
+
+opencv-python
+
+tqdm

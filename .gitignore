@@ -1,0 +1,7 @@
+.idea
+**.pyc
+**.json
+**.h5
+logs
+**.odt
+**.sh

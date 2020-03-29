@@ -1,0 +1,19 @@
+# This builds a docker image using the following parameters
+
+version: '3.7'
+services:
+    rocmtest:
+        image: rocmtest:grossi
+        build:
+          context: .
+          dockerfile: dockerfile
+        environment:
+          DISPLAY:
+          TF_FORCE_GPU_ALLOW_GROWTH: 'true'
+          ROCM_PATH: 3.1.0
+        user: 1000:1000
+        volumes:
+          - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
+          - "/etc/passwd:/etc/passwd"
+          #- "/home/paul/.keras/:/tmp/.keras/"
+          - "/opt/data:/opt/data"
