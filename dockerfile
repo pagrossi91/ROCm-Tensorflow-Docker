@@ -2,7 +2,9 @@
 #FROM tensorflow/tensorflow:2.1.0-py3
 
 # Sets up docker image for AMD using ROCm stack
-FROM rocm/tensorflow:rocm3.1-tf2.1-python3
+# Using TF2.0 due to generator warning with :rocm3.1-tf2.1-python3
+# Location of rocm/tensorflow builds: https://hub.docker.com/r/rocm/tensorflow/tags
+FROM rocm/tensorflow:rocm3.1-tf2.0-python3
 
 # Required for both NVIDIA and AMD
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
