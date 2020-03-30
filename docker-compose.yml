@@ -17,5 +17,5 @@ services:
           - "/dev/dri:/dev/dri"
         volumes:
           - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
-          - "/etc/passwd:/etc/passwd:ro"
+          - "/etc/passwd:/etc/passwd"
           - "/opt/data:/opt/data"
